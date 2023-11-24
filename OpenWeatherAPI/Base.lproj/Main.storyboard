@@ -17,25 +17,83 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-7h-nID">
-                                <rect key="frame" x="161" y="322" width="71" height="36"/>
+                                <rect key="frame" x="143.66666666666666" y="322" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-iP-hqP">
-                                <rect key="frame" x="161" y="430" width="71" height="36"/>
+                                <rect key="frame" x="143.66666666666666" y="430" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Xp4-wn-K2r">
+                                <rect key="frame" x="16" y="618" width="326.33333333333331" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-Y7-R9j">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="75j-FB-yc6"/>
+                                            <constraint firstAttribute="height" constant="65" id="mL7-41-Wmr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="徳島">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedTokushima:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ux-ME-T5T"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2m-tc-3RS">
+                                        <rect key="frame" x="132" y="0.0" width="33.333333333333343" height="65"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-0t-DN1">
+                                        <rect key="frame" x="226.33333333333337" y="0.0" width="100" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="bak-5E-enB"/>
+                                            <constraint firstAttribute="height" constant="65" id="sW3-Qr-DvR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="東京">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedTokyo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZO-zo-EOs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CXf-0t-DN1" firstAttribute="leading" secondItem="j2m-tc-3RS" secondAttribute="trailing" constant="61" id="2w1-dr-jWO"/>
+                                    <constraint firstAttribute="width" constant="250" id="Jpj-XN-O0X"/>
+                                    <constraint firstItem="j2m-tc-3RS" firstAttribute="leading" secondItem="Xma-Y7-R9j" secondAttribute="trailing" constant="61" id="PoG-vh-N9F"/>
+                                    <constraint firstAttribute="height" constant="65" id="UKS-Au-XeV"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZVa-7h-nID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xl-Cd-Si7"/>
+                            <constraint firstItem="IkK-iP-hqP" firstAttribute="top" secondItem="ZVa-7h-nID" secondAttribute="bottom" constant="72" id="6dP-gv-XHM"/>
                             <constraint firstItem="IkK-iP-hqP" firstAttribute="top" secondItem="ZVa-7h-nID" secondAttribute="bottom" constant="72" id="NET-Oj-Qlt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xp4-wn-K2r" secondAttribute="trailing" constant="16" id="T9X-ek-ttF"/>
                             <constraint firstItem="IkK-iP-hqP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aUj-YA-Pac"/>
                             <constraint firstItem="ZVa-7h-nID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="263" id="bsF-y7-7ii"/>
+                            <constraint firstItem="Xp4-wn-K2r" firstAttribute="top" secondItem="IkK-iP-hqP" secondAttribute="bottom" constant="152" id="mb1-y6-6a0"/>
+                            <constraint firstItem="Xp4-wn-K2r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qBf-NI-qDB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xp4-wn-K2r" secondAttribute="bottom" constant="135" id="yLx-js-079"/>
                         </constraints>
                     </view>
                     <connections>
@@ -49,8 +107,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
