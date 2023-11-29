@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wfI-VO-2XY">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -8,94 +8,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tokushima-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenWeatherAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TokushimaViewController" customModule="OpenWeatherAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-7h-nID">
-                                <rect key="frame" x="143.66666666666666" y="322" width="71" height="36"/>
+                                <rect key="frame" x="161" y="322" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-iP-hqP">
-                                <rect key="frame" x="143.66666666666666" y="430" width="71" height="36"/>
+                                <rect key="frame" x="161" y="430" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Xp4-wn-K2r">
-                                <rect key="frame" x="16" y="618" width="326.33333333333331" height="65"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-Y7-R9j">
-                                        <rect key="frame" x="0.0" y="0.0" width="71" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="75j-FB-yc6"/>
-                                            <constraint firstAttribute="height" constant="65" id="mL7-41-Wmr"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="徳島">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tappedTokushima:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ux-ME-T5T"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2m-tc-3RS">
-                                        <rect key="frame" x="132" y="0.0" width="33.333333333333343" height="65"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-0t-DN1">
-                                        <rect key="frame" x="226.33333333333337" y="0.0" width="100" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="bak-5E-enB"/>
-                                            <constraint firstAttribute="height" constant="65" id="sW3-Qr-DvR"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="東京">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="linkColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tappedTokyo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZO-zo-EOs"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcO-jq-alS">
+                                <rect key="frame" x="96" y="691" width="200" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-0t-DN1">
+                                <rect key="frame" x="146.66666666666666" y="571" width="100" height="65"/>
                                 <constraints>
-                                    <constraint firstItem="CXf-0t-DN1" firstAttribute="leading" secondItem="j2m-tc-3RS" secondAttribute="trailing" constant="61" id="2w1-dr-jWO"/>
-                                    <constraint firstAttribute="width" constant="250" id="Jpj-XN-O0X"/>
-                                    <constraint firstItem="j2m-tc-3RS" firstAttribute="leading" secondItem="Xma-Y7-R9j" secondAttribute="trailing" constant="61" id="PoG-vh-N9F"/>
-                                    <constraint firstAttribute="height" constant="65" id="UKS-Au-XeV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="bak-5E-enB"/>
+                                    <constraint firstAttribute="height" constant="65" id="sW3-Qr-DvR"/>
                                 </constraints>
-                            </stackView>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="徳島">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedTokushima:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3t0-lm-2By"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZVa-7h-nID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xl-Cd-Si7"/>
                             <constraint firstItem="IkK-iP-hqP" firstAttribute="top" secondItem="ZVa-7h-nID" secondAttribute="bottom" constant="72" id="6dP-gv-XHM"/>
+                            <constraint firstItem="IkK-iP-hqP" firstAttribute="centerX" secondItem="ZVa-7h-nID" secondAttribute="centerX" id="DLi-Lb-8gd"/>
                             <constraint firstItem="IkK-iP-hqP" firstAttribute="top" secondItem="ZVa-7h-nID" secondAttribute="bottom" constant="72" id="NET-Oj-Qlt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xp4-wn-K2r" secondAttribute="trailing" constant="16" id="T9X-ek-ttF"/>
                             <constraint firstItem="IkK-iP-hqP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aUj-YA-Pac"/>
                             <constraint firstItem="ZVa-7h-nID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="263" id="bsF-y7-7ii"/>
-                            <constraint firstItem="Xp4-wn-K2r" firstAttribute="top" secondItem="IkK-iP-hqP" secondAttribute="bottom" constant="152" id="mb1-y6-6a0"/>
-                            <constraint firstItem="Xp4-wn-K2r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qBf-NI-qDB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xp4-wn-K2r" secondAttribute="bottom" constant="135" id="yLx-js-079"/>
+                            <constraint firstItem="CXf-0t-DN1" firstAttribute="top" secondItem="IkK-iP-hqP" secondAttribute="bottom" constant="105" id="lTy-EM-V6z"/>
+                            <constraint firstItem="CXf-0t-DN1" firstAttribute="centerX" secondItem="ZVa-7h-nID" secondAttribute="centerX" id="ybW-w5-P60"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Tokushima" image="house.fill" catalog="system" id="81j-HB-Dxh"/>
                     <connections>
                         <outlet property="prefectureLabel" destination="IkK-iP-hqP" id="pTL-6E-H5n"/>
                         <outlet property="weatherLabel" destination="ZVa-7h-nID" id="1Yj-ed-E52"/>
@@ -103,18 +73,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="e8P-Jv-Dv4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wfI-VO-2XY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5N-L9-FRh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MYB-Ge-dp8"/>
+                        <segue destination="TmO-vC-jHv" kind="relationship" relationship="viewControllers" id="MVe-Qk-tRx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9Y-pN-AYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--Tokyo-->
+        <scene sceneID="TZQ-rr-LgX">
+            <objects>
+                <viewController id="TmO-vC-jHv" customClass="TokyoViewController" customModule="OpenWeatherAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fqN-Wg-MOT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-7N-pYf">
+                                <rect key="frame" x="161" y="322" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fH2-xB-LBp">
+                                <rect key="frame" x="161" y="430" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ef7-y6-2C0">
+                                <rect key="frame" x="96" y="691" width="200" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-Bl-lIR">
+                                <rect key="frame" x="146.66666666666666" y="571" width="100" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="CGw-x3-gy0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="WWG-7d-sim"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="東京">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedTokyo:" destination="TmO-vC-jHv" eventType="touchUpInside" id="Vec-Uz-5BL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oQF-gf-NIE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fH2-xB-LBp" firstAttribute="centerX" secondItem="fqN-Wg-MOT" secondAttribute="centerX" id="0Bm-K0-fVF"/>
+                            <constraint firstItem="fH2-xB-LBp" firstAttribute="centerX" secondItem="fqN-Wg-MOT" secondAttribute="centerX" id="2PC-2p-e65"/>
+                            <constraint firstItem="fqM-Bl-lIR" firstAttribute="top" secondItem="fH2-xB-LBp" secondAttribute="bottom" constant="105" id="3x5-qM-IOT"/>
+                            <constraint firstItem="fqM-Bl-lIR" firstAttribute="centerX" secondItem="fqN-Wg-MOT" secondAttribute="centerX" id="IfI-bJ-vei"/>
+                            <constraint firstItem="A2p-7N-pYf" firstAttribute="centerX" secondItem="fqN-Wg-MOT" secondAttribute="centerX" id="Own-Aa-WiH"/>
+                            <constraint firstItem="A2p-7N-pYf" firstAttribute="top" secondItem="oQF-gf-NIE" secondAttribute="top" constant="263" id="TEt-Rc-mpQ"/>
+                            <constraint firstItem="A2p-7N-pYf" firstAttribute="centerX" secondItem="fqN-Wg-MOT" secondAttribute="centerX" id="e1A-gr-Jm4"/>
+                            <constraint firstItem="fH2-xB-LBp" firstAttribute="top" secondItem="A2p-7N-pYf" secondAttribute="bottom" constant="72" id="m8A-qL-SN5"/>
+                            <constraint firstItem="fH2-xB-LBp" firstAttribute="top" secondItem="A2p-7N-pYf" secondAttribute="bottom" constant="72" id="unb-7T-ngj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tokyo" image="house" catalog="system" id="oog-Qb-183"/>
+                    <connections>
+                        <outlet property="prefectureLabel" destination="fH2-xB-LBp" id="yNs-yu-Uxb"/>
+                        <outlet property="weatherLabel" destination="A2p-7N-pYf" id="kx4-Py-ytv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfe-er-PI3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="751"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

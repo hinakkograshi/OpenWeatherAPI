@@ -6,16 +6,8 @@
 
 import UIKit
 
-struct WeatherData: Decodable {
-    let weather: [Weather]
-    let name: String
-}
 
-struct Weather: Decodable {
-    let main: String
-}
-
-class ViewController: UIViewController {
+class TokushimaViewController: UIViewController {
 
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var prefectureLabel: UILabel!
@@ -28,11 +20,7 @@ class ViewController: UIViewController {
     @IBAction func tappedTokushima(_ sender: UIButton) {
         getWeatherFromAPI(latitude: "34.065756", longitude: "134.559297")
     }
-
-    @IBAction func tappedTokyo(_ sender: UIButton) {
-        getWeatherFromAPI(latitude: "35.689753", longitude: "139.691731")
-    }
-
+    
     func showAPIErrorAlert(lat: String, lon: String) {
         let alert = UIAlertController(title: "エラー", message: "通信に失敗しました。", preferredStyle: .alert)
         let action = UIAlertAction(title: "リトライ", style: .default) { (action) in
@@ -50,11 +38,9 @@ class ViewController: UIViewController {
         let urlRequest = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self]
             data, response, error in
-            print("self:", self)
 
             guard let data = data else {
                 return DispatchQueue.main.async {
-                    print("self:", self)
                     //🟥ここのselfってViewControllerで置き換えれないの？
                     //weakself?
                     self?.showAPIErrorAlert(lat: latitude, lon: longitude)
