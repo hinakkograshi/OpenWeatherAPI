@@ -14,25 +14,31 @@ class TokyoViewController: UIViewController {
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var prefectureLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func tappedTokyo(_ sender: UIButton) {
-        APIClient().getWeatherFromAPI(latitude: latitude, longitude: longitude)
-        { description, cityName in
-            DispatchQueue.main.async {
-                self.weatherLabel.text = description
-                self.prefectureLabel.text = cityName
-                print("データ取得完了")
+        //🟥2回　1個にする
+        APIClient().getWeatherFromAPI(
+            latitude: latitude,
+            longitude: longitude,
+            completionHandler: { description, cityName in
+                DispatchQueue.main.async {
+                    //プロパティにクロージャを保存して実行を待っている！あとで呼びたい！
+                    self.weatherLabel.text = description
+                    self.prefectureLabel.text = cityName
+                    print("データ取得完了")
+                }
+            }, 
+            errorCompletionHandler: {
+                DispatchQueue.main.async {
+                    self.showAPIErrorAlert()
+                }
             }
-        } errorCompletionHandler: {
-            DispatchQueue.main.async {
-                self.showAPIErrorAlert()
-            }
-        }
+        )
     }
-
+//Viewの管轄
+    //AlertControllerを
+    //func makeErrorAlert(didTapRetry: () -> Void) -> UIAlertController
+    //Modelじゃなくて、Viewの処理を切り出す！
+    //struct AlertMaker makeErrorAlert
     func showAPIErrorAlert() {
         let alert = UIAlertController(title: "エラー", message: "通信に失敗しました。", preferredStyle: .alert)
         let action = UIAlertAction(title: "リトライ", style: .default) { (action) in
