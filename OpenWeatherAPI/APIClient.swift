@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIClient {//succes,failer identifierは何使ってもいいが、わかりやすい名前
-    func getWeatherFromAPI(latitude: String, longitude: String, completionHandler: @escaping (String, String) -> Void, errorCompletionHandler: @escaping () -> Void) {
+    func getWeatherFromAPI(latitude: String, longitude: String, success: @escaping (String, String) -> Void, failure: @escaping () -> Void) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(Constants.apiKey)"
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
@@ -16,7 +16,7 @@ struct APIClient {//succes,failer identifierは何使ってもいいが、わか
             print("クロージャ実行開始")
             //同じ名前　ショートハンド
             guard let data else {
-                errorCompletionHandler()
+                failure()
                 return
             }
             do {
@@ -24,10 +24,10 @@ struct APIClient {//succes,failer identifierは何使ってもいいが、わか
                 let description = decodeData.weather[0].main
                 let cityName = decodeData.name
                 //Voidなので何も返さない！
-                completionHandler(description, cityName)
+                success(description, cityName)
 
             } catch {
-                errorCompletionHandler()
+                failure()
             }
         }
         task.resume()
