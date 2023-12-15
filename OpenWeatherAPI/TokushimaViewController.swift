@@ -13,11 +13,6 @@ class TokushimaViewController: UIViewController {
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var prefectureLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     @IBAction func tappedTokushima(_ sender: UIButton) {
         APIClient().getWeatherFromAPI(latitude: latitude, longitude: longitude) { description, cityName in
             DispatchQueue.main.async {
@@ -33,6 +28,7 @@ class TokushimaViewController: UIViewController {
     }
     
     func showAPIErrorAlert() {
+        print("Hinakko")
         let alert = UIAlertController(title: "エラー", message: "通信に失敗しました。", preferredStyle: .alert)
         let action = UIAlertAction(title: "リトライ", style: .default) { (action) in
             APIClient().getWeatherFromAPI(latitude: self.latitude, longitude: self.longitude) { description, cityName in
