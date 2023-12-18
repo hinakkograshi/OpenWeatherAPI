@@ -9,41 +9,34 @@ import UIKit
 class TokushimaViewController: UIViewController {
     private let latitude = "34.065756"
     private let longitude = "134.559297"
-    
+    let apiClient = APIClient()
+    let alertMaker = AlertMaker()
+
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var prefectureLabel: UILabel!
-    
+
     @IBAction func tappedTokushima(_ sender: UIButton) {
-        APIClient().getWeatherFromAPI(latitude: latitude, longitude: longitude) { description, cityName in
-            DispatchQueue.main.async {
-                self.weatherLabel.text = description
-                self.prefectureLabel.text = cityName
-            }
-        } errorCompletionHandler: {
-            DispatchQueue.main.async {
-                self.showAPIErrorAlert()
-            }
-        }
-        
+        showWetherView()
     }
-    
-    func showAPIErrorAlert() {
-        print("Hinakko")
-        let alert = UIAlertController(title: "エラー", message: "通信に失敗しました。", preferredStyle: .alert)
-        let action = UIAlertAction(title: "リトライ", style: .default) { (action) in
-            APIClient().getWeatherFromAPI(latitude: self.latitude, longitude: self.longitude) { description, cityName in
+
+    func showWetherView() {
+        apiClient.getWeatherFromAPI(
+            latitude: latitude,
+            longitude: longitude,
+            success: { description, cityName in
                 DispatchQueue.main.async {
                     self.weatherLabel.text = description
                     self.prefectureLabel.text = cityName
                 }
-            } errorCompletionHandler: {
+            },
+            failure: {
                 DispatchQueue.main.async {
-                    self.showAPIErrorAlert()
+                    let alert = self.alertMaker.showAPIErrorAlert {
+                        self.showWetherView()
+                    }
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
-            alert.dismiss(animated: true, completion: nil)
-        }
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
+        )
     }
 }

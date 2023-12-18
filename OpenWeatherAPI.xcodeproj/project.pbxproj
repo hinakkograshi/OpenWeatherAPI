@@ -20,6 +20,7 @@
 		539267022B13FB4000885909 /* TokyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539267012B13FB4000885909 /* TokyoViewController.swift */; };
 		539B219B2B14C5D60075BE6D /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B219A2B14C5D60075BE6D /* WeatherData.swift */; };
 		539C65E72B0647B400FEF9AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C65E62B0647B400FEF9AD /* Constants.swift */; };
+		53BB374D2B2DDA7200C6F00A /* AlertMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BB374C2B2DDA7200C6F00A /* AlertMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		539267012B13FB4000885909 /* TokyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoViewController.swift; sourceTree = "<group>"; };
 		539B219A2B14C5D60075BE6D /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		539C65E62B0647B400FEF9AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		53BB374C2B2DDA7200C6F00A /* AlertMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				537F48E32B010AE000534B48 /* SceneDelegate.swift */,
 				537F48E52B010AE000534B48 /* TokushimaViewController.swift */,
 				539267012B13FB4000885909 /* TokyoViewController.swift */,
+				53BB374C2B2DDA7200C6F00A /* AlertMaker.swift */,
 				539B219A2B14C5D60075BE6D /* WeatherData.swift */,
 				530F7BA62B2599F20014BDB9 /* APIClient.swift */,
 				537F48E72B010AE000534B48 /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				539267022B13FB4000885909 /* TokyoViewController.swift in Sources */,
 				530F7BA72B2599F20014BDB9 /* APIClient.swift in Sources */,
 				537F48E62B010AE000534B48 /* TokushimaViewController.swift in Sources */,
+				53BB374D2B2DDA7200C6F00A /* AlertMaker.swift in Sources */,
 				537F48E22B010AE000534B48 /* AppDelegate.swift in Sources */,
 				537F48E42B010AE000534B48 /* SceneDelegate.swift in Sources */,
 				539B219B2B14C5D60075BE6D /* WeatherData.swift in Sources */,
