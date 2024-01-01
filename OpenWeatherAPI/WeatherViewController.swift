@@ -6,20 +6,24 @@
 
 import UIKit
 
-class TokushimaViewController: UIViewController {
-    private let latitude = "34.065756"
-    private let longitude = "134.559297"
+class WeatherViewController: UIViewController {
+    var latitude = ""
+    var longitude = ""
+
     let apiClient = APIClient()
     let alertMaker = AlertMaker()
 
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var prefectureLabel: UILabel!
-
-    @IBAction func tappedTokushima(_ sender: UIButton) {
-        showWetherView()
+    static func instanciate() -> WeatherViewController {
+        UIStoryboard(name: "WeatherView", bundle: nil).instantiateViewController(withIdentifier: "WeatherView") as! WeatherViewController
     }
 
-    func showWetherView() {
+    @IBAction func tappedFetchWeather(_ sender: UIButton) {
+        showWeatherView()
+    }
+
+    func showWeatherView() {
         apiClient.getWeatherFromAPI(
             latitude: latitude,
             longitude: longitude,
@@ -31,9 +35,10 @@ class TokushimaViewController: UIViewController {
             },
             failure: {
                 DispatchQueue.main.async {
-                    let alert = self.alertMaker.showAPIErrorAlert {
-                        self.showWetherView()
-                    }
+                    let alert = self.alertMaker.make(didTapRetry: {
+                        self.showWeatherView()
+                    })
+                    self.showWeatherView()
                     self.present(alert, animated: true, completion: nil)
                 }
             }
