@@ -15,6 +15,9 @@ class WeatherViewController: UIViewController {
 
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var prefectureLabel: UILabel!
+    static func instanciate() -> WeatherViewController {
+        UIStoryboard(name: "WeatherView", bundle: nil).instantiateViewController(withIdentifier: "WeatherView") as! WeatherViewController
+    }
 
     @IBAction func tappedFetchWeather(_ sender: UIButton) {
         showWeatherView()
@@ -32,9 +35,10 @@ class WeatherViewController: UIViewController {
             },
             failure: {
                 DispatchQueue.main.async {
-                    let alert = self.alertMaker.createUIAlertController {
+                    let alert = self.alertMaker.make(didTapRetry: {
                         self.showWeatherView()
-                    }
+                    })
+                    self.showWeatherView()
                     self.present(alert, animated: true, completion: nil)
                 }
             }
