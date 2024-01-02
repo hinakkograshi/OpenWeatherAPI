@@ -65,8 +65,7 @@
                             <constraint firstItem="qTU-gJ-ApB" firstAttribute="top" secondItem="UgW-TL-rxp" secondAttribute="bottom" constant="105" id="tM8-ff-4Vd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tokushima" image="house.fill" catalog="system" id="yyo-y3-wbM"/>
-                    <navigationItem key="navigationItem" title="Title" id="Bcj-lT-3Xr"/>
+                    <navigationItem key="navigationItem" title="Title" id="7H6-Eo-Zha"/>
                     <connections>
                         <outlet property="prefectureLabel" destination="UgW-TL-rxp" id="FbI-ez-00d"/>
                         <outlet property="weatherLabel" destination="lSU-Wo-ngH" id="1EE-BJ-yv4"/>
@@ -74,11 +73,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SP4-ZH-Iuy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013" y="200"/>
+            <point key="canvasLocation" x="1939.6946564885495" y="200"/>
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

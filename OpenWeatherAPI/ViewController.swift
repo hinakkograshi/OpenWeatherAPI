@@ -21,20 +21,20 @@ class ViewController: UIViewController {
         let weatherVC = WeatherViewController.instanciate()
         weatherVC.latitude = tokushimaLatitude
         weatherVC.longitude = tokushimaLongitude
-        self.present(weatherVC, animated: true, completion: nil)
+        navigationController?.pushViewController(weatherVC, animated: true)
     }
-    
+
     @IBAction func TapTokyoButton(_ sender: UIButton) {
         let weatherVC = WeatherViewController.instanciate()
-        weatherVC.latitude = tokyoLatitude
-        weatherVC.longitude = tokyoLongitude
-        self.present(weatherVC, animated: true, completion: nil)
+        weatherVC.latitude = tokushimaLatitude
+        weatherVC.longitude = tokushimaLongitude
+        navigationController?.pushViewController(weatherVC, animated: true)
     }
 
     @IBAction func TapHokkaidoButton(_ sender: UIButton) {
         let weatherVC = WeatherViewController.instanciate()
-        weatherVC.latitude = hokkaidoLatitude
-        weatherVC.longitude = hokkaidoLongitude
-        self.present(weatherVC, animated: true, completion: nil)
+        weatherVC.latitude = tokushimaLatitude
+        weatherVC.longitude = tokushimaLongitude
+        navigationController?.pushViewController(weatherVC, animated: true)
     }
 }

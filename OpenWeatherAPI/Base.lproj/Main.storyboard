@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ygj-yc-trt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xr4-dC-bW0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -16,86 +16,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irH-dQ-stl">
-                                <rect key="frame" x="146.66666666666666" y="349" width="100" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Kzm-v7-rSE"/>
-                                    <constraint firstAttribute="height" constant="65" id="Vgu-wc-oxt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="徳島">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="TapTokushimaButton:" destination="ygj-yc-trt" eventType="touchUpInside" id="oEN-P4-u3L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhj-sf-d8E">
-                                <rect key="frame" x="146.66666666666666" y="444" width="100" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="gR2-On-3hZ"/>
-                                    <constraint firstAttribute="height" constant="65" id="hTx-oN-ADN"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="東京">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="TapTokyoButton:" destination="ygj-yc-trt" eventType="touchUpInside" id="lwH-Dh-POa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RO1-PW-xqb">
-                                <rect key="frame" x="146.66666666666666" y="531" width="100" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="H4b-qa-Gfy"/>
-                                    <constraint firstAttribute="width" constant="100" id="tVL-Aq-89g"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="北海道">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="TapHokkaidoButton:" destination="ygj-yc-trt" eventType="touchUpInside" id="7Ez-zw-z9G"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1R4-bT-Yfq">
                                 <rect key="frame" x="112" y="245" width="169" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="ZfU-8L-L87"/>
-                                    <constraint firstAttribute="width" constant="169" id="fq4-GZ-Lm6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="fq4-GZ-Lm6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-TF-jHN">
+                                <rect key="frame" x="146.66666666666666" y="374" width="100" height="307"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irH-dQ-stl">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="P0a-nJ-ebG"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nk1-io-CHN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="徳島">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="TapTokushimaButton:" destination="ygj-yc-trt" eventType="touchUpInside" id="oEN-P4-u3L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhj-sf-d8E">
+                                        <rect key="frame" x="0.0" y="121" width="100" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="FK5-nR-MIa"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="soo-mg-DVU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="東京">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="TapTokyoButton:" destination="ygj-yc-trt" eventType="touchUpInside" id="lwH-Dh-POa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RO1-PW-xqb">
+                                        <rect key="frame" x="0.0" y="242" width="100" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GNm-YS-Afz"/>
+                                            <constraint firstAttribute="height" constant="65" id="gwD-J3-fxV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="北海道">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="TapHokkaidoButton:" destination="ygj-yc-trt" eventType="touchUpInside" id="7Ez-zw-z9G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vz-Uf-Xfp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9Vz-Uf-Xfp" firstAttribute="bottom" secondItem="RO1-PW-xqb" secondAttribute="bottom" constant="222" id="4dp-Xw-e6t"/>
+                            <constraint firstItem="1R4-bT-Yfq" firstAttribute="top" secondItem="9Vz-Uf-Xfp" secondAttribute="top" constant="142" id="0nK-Ca-8qw"/>
                             <constraint firstItem="1R4-bT-Yfq" firstAttribute="centerX" secondItem="MGB-Iw-ME8" secondAttribute="centerX" id="4sC-yh-lFO"/>
-                            <constraint firstItem="Hhj-sf-d8E" firstAttribute="top" secondItem="irH-dQ-stl" secondAttribute="bottom" constant="30" id="BOp-Z5-ADB"/>
-                            <constraint firstItem="1R4-bT-Yfq" firstAttribute="top" secondItem="9Vz-Uf-Xfp" secondAttribute="top" constant="186" id="MqS-9N-ceH"/>
-                            <constraint firstItem="RO1-PW-xqb" firstAttribute="top" secondItem="Hhj-sf-d8E" secondAttribute="bottom" constant="22" id="Txs-ub-rkD"/>
-                            <constraint firstItem="RO1-PW-xqb" firstAttribute="centerX" secondItem="MGB-Iw-ME8" secondAttribute="centerX" id="WWH-vM-DJr"/>
-                            <constraint firstItem="irH-dQ-stl" firstAttribute="top" secondItem="1R4-bT-Yfq" secondAttribute="bottom" constant="68" id="kbQ-QY-MGE"/>
-                            <constraint firstItem="Hhj-sf-d8E" firstAttribute="centerX" secondItem="MGB-Iw-ME8" secondAttribute="centerX" id="rrZ-Co-eUc"/>
-                            <constraint firstItem="irH-dQ-stl" firstAttribute="centerX" secondItem="MGB-Iw-ME8" secondAttribute="centerX" id="sCL-yI-L1b"/>
+                            <constraint firstItem="cg9-TF-jHN" firstAttribute="top" secondItem="1R4-bT-Yfq" secondAttribute="bottom" constant="93" id="I2f-Sb-DP7"/>
+                            <constraint firstItem="cg9-TF-jHN" firstAttribute="centerX" secondItem="MGB-Iw-ME8" secondAttribute="centerX" id="Xz5-vd-GTE"/>
+                            <constraint firstItem="cg9-TF-jHN" firstAttribute="centerX" secondItem="MGB-Iw-ME8" secondAttribute="centerX" id="cDF-6Z-f2j"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4yu-Gx-pcU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIc-m2-R3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="200"/>
+            <point key="canvasLocation" x="927.48091603053433" y="200"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OxO-O9-3rz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xr4-dC-bW0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pgm-Ni-y5g">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ygj-yc-trt" kind="relationship" relationship="rootViewController" id="L3s-oe-PxY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcA-5P-VWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.76335877862595414" y="200"/>
         </scene>
     </scenes>
     <resources>
