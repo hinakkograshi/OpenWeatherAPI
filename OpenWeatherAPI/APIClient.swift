@@ -22,7 +22,7 @@ struct APIClient {
                 let description = decodeData.weather[0].main
                 let cityName = decodeData.name
                 success(description, cityName)
-
+                
             } catch {
                 failure()
             }
