@@ -2,7 +2,7 @@
 Open Weather APIを使用したミニアプリです。
 URL: https://openweathermap.org/current
 
-選択した都道府県のボタンの県庁所在地の緯度と軽度を用い、API通信を行い、都道府県名・天気を取得しています。
+選択した都道府県のボタンの県庁所在地の緯度と経度を用い、API通信を行い、都道府県名・天気を取得しています。
 
 https://github.com/hinakkograshi/OpenWeatherAPI/assets/131275914/cff91848-3f03-49f4-9a97-3b4ffb254bcb
 
