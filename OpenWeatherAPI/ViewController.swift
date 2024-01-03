@@ -26,15 +26,15 @@ class ViewController: UIViewController {
 
     @IBAction func TapTokyoButton(_ sender: UIButton) {
         let weatherVC = WeatherViewController.instanciate()
-        weatherVC.latitude = tokushimaLatitude
-        weatherVC.longitude = tokushimaLongitude
+        weatherVC.latitude = tokyoLatitude
+        weatherVC.longitude = tokyoLongitude
         navigationController?.pushViewController(weatherVC, animated: true)
     }
 
     @IBAction func TapHokkaidoButton(_ sender: UIButton) {
         let weatherVC = WeatherViewController.instanciate()
-        weatherVC.latitude = tokushimaLatitude
-        weatherVC.longitude = tokushimaLongitude
+        weatherVC.latitude = hokkaidoLatitude
+        weatherVC.longitude = hokkaidoLongitude
         navigationController?.pushViewController(weatherVC, animated: true)
     }
 }
